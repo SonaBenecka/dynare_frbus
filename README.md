@@ -27,7 +27,7 @@ setenv('FRBUS_DYNARE_PATH', 'C:\path\to\dynare\matlab')
 1. Open MATLAB and change to the repository root:
 
 ```matlab
-cd('C:\path\to\dynare_frbus_v4_github')
+cd('C:\dynare_pac\dynare_frbus')
 ```
 
 2. Run the complete workflow:

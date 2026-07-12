@@ -1,8 +1,6 @@
-function main
+% Run the complete FRB/US Dynare workflow from any current folder.
 this_file = mfilename('fullpath');
 repo_root = fileparts(this_file);
-old_dir = pwd;
-cleanup = onCleanup(@() cd(old_dir)); %#ok<NASGU>
 cd(fullfile(repo_root, 'matlab'))
 
 run_baseline_check_backward
@@ -15,4 +13,3 @@ if isempty(getenv('FRBUS_NREPL'))
     setenv('FRBUS_NREPL', '1000')
 end
 run_stochastic_simulation_backward
-end
