@@ -1,0 +1,16 @@
+# Dynare creates these model-specific packages when a .mod file is processed.
+dynare/+frbus_backward/
+dynare/+frbus_mce/
+dynare/frbus_backward/
+dynare/frbus_mce/
+
+# Generated MATLAB, Dynare, and LaTeX runtime files.
+*.asv
+*.log
+*.mat
+__pycache__/
+.pytest_cache/
+report/*.aux
+report/*.out
+report/*.toc
+report/*.synctex.gz
