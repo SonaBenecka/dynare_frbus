@@ -24,17 +24,25 @@ setenv('FRBUS_DYNARE_PATH', 'C:\path\to\dynare\matlab')
 
 ## Quick start
 
+`main.m` finds its own location automatically. It sets the repository root as
+MATLAB's working directory and adds the `matlab/` helper folder to the path,
+so there are no hard-coded paths inside the workflow.
+
 1. Open MATLAB and change to the repository root:
 
 ```matlab
 cd('C:\dynare_pac\dynare_frbus')
 ```
 
-2. Run the complete workflow:
+2. Start the complete workflow:
 
 ```matlab
 main
 ```
+
+You can also open `main.m` in the MATLAB Editor and press Run. The script
+prints the folder it found and the working directory it selected before
+starting the exercises.
 
 `main.m` runs the baseline check, the backward-looking monetary-policy shock,
 the MCE shock, error propagation, endogenous targeting, and stochastic
@@ -48,8 +56,8 @@ setenv('FRBUS_NREPL', '10')
 run_stochastic_simulation_backward
 ```
 
-The scenario scripts can also be run individually from the repository root
-after adding the MATLAB folder:
+The scenario scripts can also be run individually from the repository root.
+If you start MATLAB elsewhere, add the repository's `matlab/` folder first:
 
 ```matlab
 addpath('matlab')
